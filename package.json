@@ -35,6 +35,7 @@
     ]
   },
   "devDependencies": {
-    "node-sass": "^4.13.0"
+    "node-sass": "^4.13.0",
+    "truffle-hdwallet-provider": "^1.0.17"
   }
 }

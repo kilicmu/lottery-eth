@@ -1,9 +1,15 @@
 let Web3 = require('web3');
 let { abi, bytecode } = require('./complex');
-
+let HDWalletProvider = require('truffle-hdwallet-provider')
 let web3 = new Web3();
-let account = '0xc19eea99843C6bA64D8A3338a5d2E7f1Fc0e95EF'
-web3.setProvider('http://127.0.0.1:8545');
+//助记词（略）
+let terms = ''
+//ropsten测试网络服务供应商，访问https://infura.io/ 注册获取
+let netIP = ''
+let provider = new HDWalletProvider(terms, netIP)
+web3.setProvider(provider)
+//此处为部署用户
+let account = ''
 
 let contract = new web3.eth.Contract(abi);
 

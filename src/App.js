@@ -99,6 +99,7 @@ class App extends React.Component {
         hasEth: await contract.methods.getBalance().call(),
         playersNum: new Set(await contract.methods.getPlayers().call()).size,
         round: await contract.methods.randNonce().call(),
+        winner: await contract.methods.getWinner().call(),
         isDisable: false
       })
     } catch (e) {
@@ -124,10 +125,9 @@ class App extends React.Component {
         <Button block type='primary' id="prim_btn" onClick={this.betting} disabled={this.state.isDisable}>投注</Button>
         <Button block type='dashed' style={{ display: this.state.show }} onClick={this.lottery} disabled={this.state.isDisable}>开奖</Button>
         <Button block type='link' style={{ display: this.state.show }} onClick={this.retired} disabled={this.state.isDisable}>退奖</Button>
-
-
-
-
+        <a
+          href="https://ropsten.etherscan.io/address/0x66BF7017fae3755c4829Cee151C4beBf392907b1"
+          style={{ float: "right" }}>点击查询交易信息</a>
       </Card>
     );
   }

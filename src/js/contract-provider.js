@@ -5,7 +5,7 @@ let abi = [{ "inputs": [], "stateMutability": "nonpayable", "type": "constructor
 
 let web3 = new Web3();
 //此处为合约地址
-let address = '0xBA939617231A0CA8db63bC5b72eD9040Eeb68631';
+let address = '0x66BF7017fae3755c4829Cee151C4beBf392907b1';
 // web3.setProvider('http://127.0.0.1:8545');
 //此处判断小狐狸的版本，决定网络供应API
 if (typeof window.ethereum !== 'undefined' || (typeof window.web3 !== 'undefined')) {
